@@ -1,0 +1,28 @@
+*{box-sizing:border-box;margin:0;padding:0;font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial;}
+body{background:#f6f7fb;color:#222;min-height:100vh;display:flex;flex-direction:column;}
+.header{height:64px;background:#fff;display:flex;align-items:center;padding:0 12px;box-shadow:0 1px 4px rgba(0,0,0,0.06);gap:12px;}
+.logo{width:44px;height:44px;border-radius:8px;background:#ff6b6b;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;}
+.header h1{font-size:18px;}
+.cart-btn{margin-left:auto;background:#fff;border:1px solid #eee;padding:8px 10px;border-radius:6px;}
+.container{padding:12px;flex:1;}
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.card{background:#fff;padding:10px;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,0.04);display:flex;flex-direction:column;gap:8px;}
+.card .name{font-weight:600;}
+.card .desc{font-size:13px;color:#666;}
+.card .price{margin-top:auto;font-weight:700;}
+.card .actions{display:flex;gap:8px;margin-top:8px;}
+.btn{padding:8px 10px;border-radius:8px;border:1px solid #e6e6e6;background:#fff;cursor:pointer;}
+.btn.primary{background:#ff6b6b;color:#fff;border-color:transparent;}
+.footer{padding:12px;text-align:center;font-size:13px;color:#888;}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.4);display:flex;align-items:flex-end;justify-content:center;padding:16px;}
+.modal.hidden{display:none;}
+.modal-panel{width:100%;max-width:680px;background:#fff;border-radius:12px;padding:12px;box-shadow:0 8px 24px rgba(0,0,0,0.12);}
+.modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+.cart-contents{max-height:40vh;overflow:auto;padding:8px 0;}
+.cart-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;}
+.cart-footer{display:flex;justify-content:space-between;align-items:center;margin-top:8px;}
+.order-form label{display:block;margin:8px 0;font-size:14px;}
+.order-form input{width:100%;padding:8px;border:1px solid #eee;border-radius:8px;margin-top:6px;}
+.pay-row{display:flex;gap:12px;margin:8px 0;}
+.order-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px;}
+@media (max-width:420px){.menu{grid-template-columns:repeat(1,1fr);} .modal{align-items:center;}}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+  <title>简易外卖站</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">外</div>
+    <h1>简易外卖站</h1>
+    <button id="open-cart" class="cart-btn">购物车(<span id="cart-count">0</span>)</button>
+  </header>
+
+  <main class="container">
+    <section id="menu" class="menu"></section>
+  </main>
+
+  <!-- 购物车 / 结算弹窗 -->
+  <div id="cart-modal" class="modal hidden">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h2>购物车</h2>
+        <button id="close-cart">关闭</button>
+      </div>
+      <div id="cart-contents" class="cart-contents"></div>
+      <div class="cart-footer">
+        <div>小计：<strong id="subtotal">¥0.00</strong></div>
+        <div class="cart-actions">
+          <button id="clear-cart" class="btn">清空</button>
+          <button id="checkout" class="btn primary">去结算</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 结算表单 -->
+  <div id="checkout-modal" class="modal hidden">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h2>确认下单</h2>
+        <button id="close-checkout">关闭</button>
+      </div>
+      <form id="order-form" class="order-form">
+        <label>姓名<input id="name" required /></label>
+        <label>电话<input id="phone" required /></label>
+        <label>地址<input id="address" required /></label>
+        <label>备注<input id="note" /></label>
+        <div class="pay-row">
+          <label><input type="radio" name="pay" value="cash" checked /> 货到付款</label>
+          <label><input type="radio" name="pay" value="wechat" /> 微信</label>
+        </div>
+        <div class="order-actions">
+          <button type="button" id="back-to-cart" class="btn">返回</button>
+          <button type="submit" class="btn primary">提交订单（模拟）</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">示例前端 · 数据保存在浏览器本地 · 仅供演示</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
